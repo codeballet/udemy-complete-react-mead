@@ -1,6 +1,6 @@
 // Higher Order Component (HOC) - A component (HOC) that renders another component
 // Reuse code
-// Render jijacking
+// Render hijacking
 // Prop manipulation
 // Abstract state
 
@@ -26,7 +26,13 @@ const withAdminWarning = (WrappedComponent) => {
 const requireAuthentication = (WrappedComponent) => {
   return (props) => (
     <div>
-      { props.isAuthenticated ? <WrappedComponent {...props} /> : <p>Please log in!</p> }
+      {
+        props.isAuthenticated ? (
+          <WrappedComponent {...props} />
+        ) : (
+          <p>Please log in!</p>
+        )
+      }
     </div>
   )
 }
