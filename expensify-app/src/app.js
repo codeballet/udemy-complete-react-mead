@@ -11,6 +11,7 @@ import 'react-dates/lib/css/_datepicker.css'
 // import getVisibleExpenses from './selectors/expenses'
 // import { addExpense } from './actions/expenses'
 // import { setTextFilter } from './actions/filters'
+console.log('test')
 
 const store = configureStore()
 
@@ -19,6 +20,5 @@ const jsx = (
     <AppRouter />
   </Provider>
 )
-console.log('test')
 
 ReactDOM.render(jsx, document.getElementById('app'))
